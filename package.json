@@ -1,0 +1,18 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "discord to telegram link",
+  "main": "index.js",
+  "scripts": {
+    "test": "/bin/true"
+  },
+  "author": "Tim Noise <tim@drkns.net>",
+  "license": "SWEG",
+  "dependencies": {
+    "discord.js": "github:hydrabolt/discord.js#stable",
+    "erlpack": "github:hammerandchisel/erlpack#master",
+    "node-telegram-bot-api": "^0.25.0",
+    "uws": "^0.12.0",
+    "winston": "^2.3.0"
+  }
+}
