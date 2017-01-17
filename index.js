@@ -18,7 +18,15 @@ dc.on('ready', function(){
     log.info('[discord] connected!');
 });
 
+dc.on('diconnect', function(){
+    log.warn('[discord] disconnect!... retrying');
+//    dc.login(config.discord.token);
+});
+
 dc.on('message', function(message){
+    // ignore self
+    if(message.author.id != dc.user.id) return;
+
     log.debug('[discord-%s-#%s]: <%s#%s> %s',
               message.channel.type, message.channel.name,
               message.author.username, message.author.discriminator,
@@ -28,8 +36,6 @@ dc.on('message', function(message){
     if (message.channel.type == 'text'
         && message.channel.id == config.discord.channel_id
         && message.guild.id == config.discord.guild_id
-        // and the message isnt from ourself...
-        && message.author.id != dc.user.id
     ) {
         // <user#1337> what's up
         var message_out = '<' + message.author.username + '#' + message.author.discriminator + '> ' + message.content;
