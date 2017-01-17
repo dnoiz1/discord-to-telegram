@@ -20,7 +20,7 @@ dc.on('ready', function(){
 
 dc.on('diconnect', function(){
     log.warn('[discord] disconnect!... retrying');
-//    dc.login(config.discord.token);
+    dc.login(config.discord.token);
 });
 
 dc.on('message', function(message){
