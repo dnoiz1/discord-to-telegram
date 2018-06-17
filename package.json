@@ -1,8 +1,9 @@
 {
   "name": "discord-to-telegram",
-  "version": "1.0.0",
-  "description": "discord to telegram link",
-  "homepage": "https://github.com/dnoiz1/discord-to-telegram"
+  "version": "2.0.0",
+  "description": "discord to telegram relay",
+  "homepage": "https://github.com/dnoiz1/discord-to-telegram",
+  "repository": "github:dnoiz1/discord-to-telegram",
   "main": "index.js",
   "scripts": {
     "test": "/bin/true"
@@ -12,8 +13,8 @@
   "dependencies": {
     "discord.js": "github:hydrabolt/discord.js#stable",
     "erlpack": "github:hammerandchisel/erlpack#master",
-    "node-telegram-bot-api": "*",
-    "uws": "*",
-    "winston": "*"
+    "node-telegram-bot-api": "^0.30.0",
+    "uws": "^10.148.0",
+    "winston": "^3.0.0"
   }
 }
